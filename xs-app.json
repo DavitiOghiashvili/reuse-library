@@ -3,22 +3,16 @@
   "authenticationMethod": "none",
   "routes": [
     {
-      "source": "^(.*)$",
+      "source": "^/resources/(.*)",
       "target": "$1",
+      "destination": "ui5-lib",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/(.*)",
+      "target": "$1",
+      "localDir": "reuse-lib/webapp",
       "authenticationType": "none"
-    },
-    {
-      "source": "^/test-resources/(.*)$",
-      "target": "/test-resources/$1",
-      "authenticationType": "none",
-      "destination": "ui5"
-    },
-    {
-      "source": "^(.*)$",
-      "target": "$1",
-      "service": "html5-apps-repo-rt",
-      "authenticationType": "xsuaa",
-      "cacheControl": "no-cache"
     }
   ]
 }
