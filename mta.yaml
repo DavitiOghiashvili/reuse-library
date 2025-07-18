@@ -1,9 +1,9 @@
 _schema-version: "3.1"
-ID: reuseLibrary
+ID: reuse.library
 version: 0.0.1
 
 modules:
-  - name: reuseLibrary
+  - name: reuse.library
     type: html5
     path: .
     build-parameters:
@@ -14,54 +14,54 @@ modules:
         - npm run build
       supported-platforms: []
 
-  - name: reuseLibrary-app-content
+  - name: reuse.library-app-content
     type: com.sap.application.content
     path: .
     requires:
-      - name: reuseLibrary-repo-host
+      - name: reuse.library-repo-host
         parameters:
           content-target: true
     build-parameters:
       build-result: resources
       requires:
-        - name: reuseLibrary
+        - name: reuse.library
           artifacts:
-            - reuseLibrary.zip
+            - reuse.library.zip
           target-path: resources/
 
-  - name: reuseLibrary-destination-content
+  - name: reuse.library-destination-content
     type: com.sap.application.content
     requires:
-      - name: reuseLibrary-destination-service
+      - name: reuse.library-destination-service
         parameters:
           content-target: true
-      - name: reuseLibrary-repo-host
+      - name: reuse.library-repo-host
         parameters:
           service-key:
-            name: reuseLibrary-repo-host-key
-      - name: reuseLibrary-uaa
+            name: reuse.library-repo-host-key
+      - name: reuse.library-uaa
         parameters:
           service-key:
-            name: reuseLibrary-uaa-key
+            name: reuse.library-uaa-key
     parameters:
       content:
         instance:
           destinations:
-            - Name: reuseLibrary_html_repo_host
-              ServiceInstanceName: reuseLibrary-html5-srv
-              ServiceKeyName: reuseLibrary-repo-host-key
-              sap.cloud.service: reuseLibrary
-            - Name: reuseLibrary-uaa
+            - Name: reuse.library_html_repo_host
+              ServiceInstanceName: reuse.library-html5-srv
+              ServiceKeyName: reuse.library-repo-host-key
+              sap.cloud.service: reuse.library
+            - Name: reuse.library-uaa
               Authentication: OAuth2UserTokenExchange
-              ServiceInstanceName: reuseLibrary-xsuaa-service
-              ServiceKeyName: reuseLibrary-uaa-key
-              sap.cloud.service: reuseLibrary
+              ServiceInstanceName: reuse.library-xsuaa-service
+              ServiceKeyName: reuse.library-uaa-key
+              sap.cloud.service: reuse.library
           existing_destinations_policy: ignore
     build-parameters:
       no-source: true
 
 resources:
-  - name: reuseLibrary-destination-service
+  - name: reuse.library-destination-service
     type: org.cloudfoundry.managed-service
     parameters:
       config:
@@ -78,22 +78,22 @@ resources:
             existing_destinations_policy: update
         version: 1.0.0
       service: destination
-      service-name: reuseLibrary-destination-service
+      service-name: reuse.library-destination-service
       service-plan: lite
 
-  - name: reuseLibrary-uaa
+  - name: reuse.library-uaa
     type: org.cloudfoundry.managed-service
     parameters:
       path: ./xs-security.json
       service: xsuaa
-      service-name: reuseLibrary-xsuaa-service
+      service-name: reuse.library-xsuaa-service
       service-plan: application
 
-  - name: reuseLibrary-repo-host
+  - name: reuse.library-repo-host
     type: org.cloudfoundry.managed-service
     parameters:
       service: html5-apps-repo
-      service-name: reuseLibrary-html5-srv
+      service-name: reuse.library-html5-srv
       service-plan: app-host
 
 parameters:

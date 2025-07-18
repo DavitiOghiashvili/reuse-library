@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<library xmlns="http://www.sap.com/sap.ui.library.xsd">
+	<name>reuse.library</name>
+	<vendor></vendor>
+	<version>${version}</version>
+	<copyright>${copyright}</copyright>
+	<title>reuse.library</title>
+	<documentation>Some description about reuse.library</documentation>
+	<dependencies>
+		<dependency>
+			<libraryName>sap.ui.core</libraryName>
+			<libraryName>sap.m</libraryName>
+		</dependency>
+	</dependencies>
+</library>
