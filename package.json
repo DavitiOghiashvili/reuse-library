@@ -6,7 +6,7 @@
 	"license": "Apache-2.0",
 	"scripts": {
 		"clean": "rimraf dist coverage",
-		"build": "ui5 build --clean-dest",
+		"build": "ui5 build --config=ui5-build.yaml --clean-dest --dest dist",
 		"start": "ui5 serve -o test-resources/reuse/library/ReuseButton.html",
 		"start:dist": "npm start -- --config ui5-dist.yaml",
 		"testsuite": "ui5 serve -o test-resources/reuse/library/qunit/testsuite.qunit.html",
@@ -28,5 +28,8 @@
 		"karma-ui5": "^4.0.1",
 		"rimraf": "^6.0.1",
 		"ui5-middleware-livereload": "^3.0.3"
+	},
+	"dependencies": {
+		"ui5-task-zipper": "^3.4.2"
 	}
 }
