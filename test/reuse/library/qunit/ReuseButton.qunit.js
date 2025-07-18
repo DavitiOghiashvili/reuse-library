@@ -1,9 +1,9 @@
 /*global QUnit, jQuery */
-sap.ui.define(["reuse/library/library", "reuse/library/Example"], function (library, Example) {
+sap.ui.define(["reuse/library/library", "reuse/library/ReuseButton"], function (library, ReuseButton) {
 	"use strict";
 
 	// refer to library types
-	const ExampleColor = library.ExampleColor;
+	const ReuseButtonColor = library.ReuseButtonColor;
 
 	// prepare DOM
 	const oDiv = document.createElement("div");
@@ -11,15 +11,15 @@ sap.ui.define(["reuse/library/library", "reuse/library/Example"], function (libr
 	document.body.appendChild(oDiv);
 
 	// module for basic checks
-	QUnit.module("Example Tests");
+	QUnit.module("ReuseButton Tests");
 
-	// example sync test
+	// ReuseButton sync test
 	QUnit.test("Sync", function (assert) {
 		assert.expect(1);
 		assert.ok(true, "ok");
 	});
 
-	// example async test
+	// ReuseButton async test
 	QUnit.test("Async", function (assert) {
 		assert.expect(1);
 		return new Promise(function (resolve /*, reject*/) {
@@ -34,18 +34,18 @@ sap.ui.define(["reuse/library/library", "reuse/library/Example"], function (libr
 	// some basic control checks
 	QUnit.test("Test get properties", function (assert) {
 		assert.expect(2);
-		const oExample = new Example({
-			text: "Example"
+		const oReuseButton = new ReuseButton({
+			text: "ReuseButton"
 		});
-		assert.equal(oExample.getText(), "Example", "Check text equals 'Example'");
-		assert.equal(oExample.getColor(), ExampleColor.Default, "Check color equals 'Default'");
+		assert.equal(oReuseButton.getText(), "ReuseButton", "Check text equals 'ReuseButton'");
+		assert.equal(oReuseButton.getColor(), ReuseButtonColor.Default, "Check color equals 'Default'");
 	});
 
 	// some basic eventing check
 	QUnit.test("Test click event", function (assert) {
 		assert.expect(1);
-		const oExample = new Example("example", {
-			text: "Example",
+		const oReuseButton = new ReuseButton("ReuseButton", {
+			text: "ReuseButton",
 			press: function () {
 				assert.ok(true, "Event has been fired!");
 			}
@@ -53,7 +53,7 @@ sap.ui.define(["reuse/library/library", "reuse/library/Example"], function (libr
 		return new Promise(function (resolve /*, reject*/) {
 			setTimeout(function () {
 				// eslint-disable-next-line new-cap
-				oExample.$().trigger(jQuery.Event("click"));
+				oReuseButton.$().trigger(jQuery.Event("click"));
 				resolve();
 			}, 100);
 		});

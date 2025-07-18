@@ -5,7 +5,7 @@ sap.ui.define(function () {
 		name: "QUnit TestSuite for reuse.library",
 		defaults: {
 			ui5: {
-				libs: ["sap.ui.core", "reuse.library"],
+				libs: ["sap.ui.core", "reuse.library", "sap.m"],
 				theme: "sap_horizon"
 			},
 			qunit: {
@@ -23,10 +23,10 @@ sap.ui.define(function () {
 			}
 		},
 		tests: {
-			// test file for the Example control
-			Example: {
-				title: "QUnit Test for Example",
-				_alternativeTitle: "QUnit tests: reuse.library.Example"
+			// test file for the ReuseButton control
+			ReuseButton: {
+				title: "QUnit Test for ReuseButton",
+				_alternativeTitle: "QUnit tests: reuse.library.ReuseButton"
 			}
 		}
 	};

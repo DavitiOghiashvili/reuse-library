@@ -1,7 +1,3 @@
-/*!
- * ${copyright}
- */
-
 /**
  * Initialization Code and shared classes of library reuse.library.
  */
@@ -17,14 +13,12 @@ sap.ui.define([
 		name: "reuse.library",
 		version: "${version}",
 		dependencies: [ // keep in sync with the ui5.yaml and .library files
-			"sap.ui.core"
-		],
-		types: [
-			"reuse.library.ExampleColor"
+			"sap.ui.core",
+			"sap.m"
 		],
 		interfaces: [],
 		controls: [
-			"reuse.library.Example"
+			"reuse.library.ReuseButton"
 		],
 		elements: [],
 		noLibraryCSS: false // if no CSS is provided, you can disable the library.css load here
@@ -42,25 +36,18 @@ sap.ui.define([
 	const thisLib = ObjectPath.get("reuse.library");
 
 	/**
-	 * Semantic Colors of the <code>reuse.library.Example</code>.
+	 * Semantic Colors of the <code>reuse.library.ReuseButton</code>.
 	 *
 	 * @enum {string}
 	 * @public
 	 */
-	thisLib.ExampleColor = {
+	thisLib.ReuseButtonColor = {
 
 		/**
 		 * Default color (brand color)
 		 * @public
 		 */
 		Default : "Default",
-
-		/**
-		 * Highlight color
-		 * @public
-		 */
-		Highlight : "Highlight"
-
 	};
 
 	return thisLib;

@@ -7,7 +7,7 @@
 	"scripts": {
 		"clean": "rimraf dist coverage",
 		"build": "ui5 build --clean-dest",
-		"start": "ui5 serve -o test-resources/reuse/library/Example.html",
+		"start": "ui5 serve -o test-resources/reuse/library/ReuseButton.html",
 		"start:dist": "npm start -- --config ui5-dist.yaml",
 		"testsuite": "ui5 serve -o test-resources/reuse/library/qunit/testsuite.qunit.html",
 		"lint": "eslint src test",
