@@ -1,12 +1,12 @@
 specVersion: '3.1'
 metadata:
   name: reuse.library
-type: application
+type: library
 
 builder:
   customTasks:
     - name: ui5-task-zipper
-      afterTask: generateCachebusterInfo
+      afterTask: generateLibraryPreload
       configuration:
         archiveName: reuse.library
         additionalFiles:

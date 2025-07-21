@@ -30,6 +30,9 @@
 		"ui5-middleware-livereload": "^3.0.3"
 	},
 	"dependencies": {
+		"@openui5/sap.ui.core": "^1.138.0",
+		"@openui5/themelib_sap_fiori_3": "^1.138.0",
+		"@openui5/themelib_sap_horizon": "^1.138.0",
 		"ui5-task-zipper": "^3.4.2"
 	}
 }

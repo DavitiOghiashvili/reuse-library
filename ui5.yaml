@@ -3,7 +3,7 @@ metadata:
   name: reuse.library
 type: library
 framework:
-  name: SAPUI5
+  name: OpenUI5
   version: 1.138.0
   libraries:
     - name: sap.ui.core

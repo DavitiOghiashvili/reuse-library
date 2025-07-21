@@ -8,9 +8,10 @@ resources:
       src: dist/resources/reuse/library/
       test: dist/test-resources/reuse/library/
 framework:
-  name: SAPUI5
+  name: OpenUI5
   version: 1.138.0
   libraries:
     - name: sap.ui.core
+    - name: sap.m
     - name: themelib_sap_horizon
     - name: themelib_sap_fiori_3
