@@ -23,7 +23,7 @@ sap.ui.define(["sap/ui/core/Core"], function (Core) {
 		rm.class("reuse-button__color")
 		rm.openEnd();
 		rm.text(i18n.getText("reuseBtn"));
-		rm.close("div");
+		rm.close("button");
 	};
 
 	return ReuseButtonRenderer;
